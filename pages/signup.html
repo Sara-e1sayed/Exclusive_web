@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up — Exclusive</title>
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+<div id="page-loader"><div class="loader-ring"></div></div>
+
+<!-- ================= TOP HEADER ================= -->
+<div class="top-header">
+  <span data-i18n="topbar">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</span>
+  <div class="brand-strip" data-i18n="brand">Exclusive</div>
+  <select class="lang-switcher">
+    <option value="en">English</option>
+    <option value="ar">العربية</option>
+  </select>
+</div>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="../index.html" class="logo">Exclusive</a>
+
+    <nav class="main-nav">
+      <a href="../index.html" data-i18n="nav_home">Home</a>
+      <a href="contact.html" data-i18n="nav_contact" class="">Contact</a>
+      <a href="about.html" data-i18n="nav_about" class="">About</a>
+      <a href="signup.html" class="login-link " data-i18n="nav_signup">Sign Up</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="search-box">
+        <input type="text" data-i18n-ph="search_ph" placeholder="What are you looking for?">
+        <button aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+
+      <button class="icon-btn" onclick="location.href='wishlist.html'" aria-label="Favorites">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.4-9.3-8.8C1 8.6 2.7 5 6.3 5c2 0 3.4 1 4.7 2.6C12.3 6 13.7 5 15.7 5c3.6 0 5.3 3.6 3.6 7.2C19 16.6 12 21 12 21z" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span class="badge fav-badge">0</span>
+      </button>
+      <a class="icon-btn" href="cart.html" aria-label="Cart">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h2l2.4 12.4a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.6L22 8H6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="21" r="1.4" fill="currentColor"/><circle cx="17" cy="21" r="1.4" fill="currentColor"/></svg>
+        <span class="badge cart-badge">0</span>
+      </a>
+
+      <button class="theme-toggle" aria-label="Toggle dark mode"><span class="knob">☀</span></button>
+
+      <a class="icon-btn login-link" href="login.html" aria-label="Login">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M4 20c1.5-4 5-6 8-6s6.5 2 8 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </a>
+
+      <div class="profile-wrap" style="display:none;">
+        <button class="icon-btn profile-trigger" aria-label="Account">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.6"/><path d="M4 20c1.5-4 5-6 8-6s6.5 2 8 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </button>
+        <div class="profile-dropdown">
+          <a href="account.html">👤 <span data-i18n="manage_account">Manage My Account</span></a>
+          <a href="account.html">📦 <span data-i18n="my_orders">My Orders</span></a>
+          <a href="#" class="logout-link">🚪 <span data-i18n="logout">Logout</span></a>
+        </div>
+      </div>
+
+      <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-overlay"></div>
+<nav class="mobile-nav">
+  <button class="close-mobile">✕</button>
+  <a href="../index.html" data-i18n="nav_home">Home</a>
+  <a href="contact.html" data-i18n="nav_contact">Contact</a>
+  <a href="about.html" data-i18n="nav_about">About</a>
+  <a href="signup.html" data-i18n="nav_signup">Sign Up</a>
+  <a href="login.html" data-i18n="nav_login">Login</a>
+  <a href="cart.html" data-i18n="cart">Cart</a>
+</nav>
+<main class="container">
+<div class="breadcrumb"><a href="../index.html">Home</a> / <span data-i18n="nav_signup">Sign Up</span></div>
+
+<div class="auth-wrap">
+  <div class="auth-image">
+    <img src="../assets/images/auth-illustration.jpg" alt="Shopping online">
+  </div>
+  <div class="auth-form">
+    <h2>Create an account</h2>
+    <p>Enter your details below</p>
+
+    <form id="signup-form" novalidate>
+      <div class="field">
+        <label>Name</label>
+        <input type="text" id="signup-name" placeholder="Name" required>
+        <div class="error-msg"></div>
+      </div>
+      <div class="field">
+        <label>Email or Phone Number</label>
+        <input type="text" id="signup-contact" placeholder="Email or Phone Number" required>
+        <div class="error-msg"></div>
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <input type="password" id="signup-password" placeholder="Password" required>
+        <div class="error-msg"></div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block" data-i18n="nav_signup">Create Account</button>
+      <button type="button" class="btn google-btn btn-block" style="margin-top:14px;" onclick="showToast('Google sign-up is a demo only.')">
+        <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.1 8 3l6-6C34.5 5.1 29.5 3 24 3 12.4 3 3 12.4 3 24s9.4 21 21 21 21-9.4 21-21c0-1.2-.1-2.3-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 16 19 13 24 13c3.1 0 5.8 1.1 8 3l6-6C34.5 5.1 29.5 3 24 3c-7.4 0-13.8 4.1-17.1 10.1z"/><path fill="#4CAF50" d="M24 45c5.4 0 10.3-1.8 14-4.9l-6.5-5.5C29.4 36 26.9 37 24 37c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.9 40.7 16.4 45 24 45z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.3-4.2 5.7l6.5 5.5C40.7 36.4 43 30.6 43 24c0-1.2-.1-2.3-.4-3.5z"/></svg>
+        Sign up with Google
+      </button>
+    </form>
+
+    <div class="auth-bottom">
+      Already have an account? <a href="login.html">Log in</a>
+    </div>
+  </div>
+</div>
+</main>
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h4>Exclusive</h4>
+      <p data-i18n="footer_subscribe" style="color:#fff;font-weight:600;">Subscribe</p>
+      <p data-i18n="footer_get">Get 10% off your first order</p>
+      <form class="subscribe-box" onsubmit="event.preventDefault(); showToast('Subscribed successfully!');">
+        <input type="email" placeholder="Enter your email" required>
+        <button aria-label="Subscribe">➤</button>
+      </form>
+    </div>
+    <div>
+      <h4 data-i18n="footer_support">Support</h4>
+      <p>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</p>
+      <p>exclusive@gmail.com</p>
+      <p>+88015-88888-9999</p>
+    </div>
+    <div>
+      <h4 data-i18n="footer_account">Account</h4>
+      <a href="account.html" data-i18n="my_account">My Account</a>
+      <a href="login.html" data-i18n="login_register">Login / Register</a>
+      <a href="cart.html" data-i18n="cart">Cart</a>
+      <a href="wishlist.html" data-i18n="wishlist">Wishlist</a>
+    </div>
+    <div>
+      <h4 data-i18n="footer_quicklink">Quick Link</h4>
+      <a href="#" data-i18n="privacy">Privacy Policy</a>
+      <a href="#" data-i18n="terms">Terms Of Use</a>
+      <a href="#" data-i18n="faq">FAQ</a>
+      <a href="contact.html" data-i18n="contact">Contact</a>
+    </div>
+    <div>
+      <h4 data-i18n="footer_app">Download App</h4>
+      <p style="font-size:12px;">Save $3 with App New User Only</p>
+      <div class="app-imgs">
+        <div class="qr"><img src="../assets/images/QR_Code.jpg"></div>
+        <div class="stores">
+          <div><img src="../assets/images/Google_Play.jpeg"></div><div><img src="../assets/images/App Store.jpeg"></div>
+        </div>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">◎</a>
+        <a href="#" aria-label="Twitter">𝕏</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom" data-i18n="copyright">Copyright Rimel 2022. All right reserved.</div>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top">↑</button>
+
+<script src="../js/main.js"></script>
+<script src="../js/slider.js"></script>
+<script src="../js/cart.js"></script>
+<script src="../js/products.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/account.js"></script>
+</body>
+</html>
